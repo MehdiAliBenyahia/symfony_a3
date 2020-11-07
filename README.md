@@ -1,7 +1,7 @@
 # symfony_a3
 Projet Symfony : Mehdi ALI BENYAHIA, Rayane COSTET, Lucas BERIOT
 
-#Installation
+# Installation
 
 <p>First, you have to download / clone this project : <a href="https://github.com/MehdiAliBenyahia/symfony_a3.git">here</a>.</p>
 
@@ -34,4 +34,4 @@ php bin/console doctrine:migrations:migrate
 php bin/console doctrine:fixture:load
 ```
 
-#Informations
+# Informations
