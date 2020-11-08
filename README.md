@@ -1,5 +1,12 @@
-# symfony_a3
-Projet Symfony : Mehdi ALI BENYAHIA, Rayane COSTET, Lucas BERIOT
+# Symfony_A3
+
+<p>Contributors</p>
+
+<ul>
+    <li>Mehdi ALI BENYAHIA</li>
+    <li>Rayane COSTET</li>
+    <li>Lucas BERIOT</li>
+</ul>
 
 # Installation
 
