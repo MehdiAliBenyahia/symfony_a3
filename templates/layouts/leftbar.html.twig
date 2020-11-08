@@ -1,0 +1,18 @@
+<div>
+    <div class="text-center">
+        <img src="{{ asset('img/symfony_back.png') }}" class="img-logo-back" alt="Illustration">
+    </div>
+    <hr>
+    <a class="btn btn-primary btn-block" href="{{ path('index') }}" target="_blank">Front-end</a>
+    <hr>
+    <h5>{{ app.user.firstname }}</h5>
+    <h5>{{ app.user.lastname }}</h5>
+    <h5>{{ app.user.email }}</h5>
+    <div class="text-center">
+        <a class="btn btn-danger btn-back-logout" href="{{ path('app_logout') }}">Déconnexion</a>
+    </div>
+    <hr>
+    <a href="{{ path('admin') }}" class="btn btn-light btn-block">Statistiques</a>
+    <a href="{{ path('category_index') }}" class="btn btn-light btn-block">Catégories</a>
+    <a href="{{ path('classes_index') }}" class="btn btn-light btn-block">Cours</a>
+</div>

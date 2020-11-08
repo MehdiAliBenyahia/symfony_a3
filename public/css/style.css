@@ -1,0 +1,21 @@
+main{ padding-top: 75px; }
+
+.logo-navbar{ width: 120px; }
+
+.flex-row-wrap-center{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-home{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-group-text{ min-width: 140px;}
+
+.mb-15{ margin-bottom: 15px; }
+
+.mt-15{ margin-top: 15px; }

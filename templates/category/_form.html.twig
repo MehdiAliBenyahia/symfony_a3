@@ -1,4 +1,15 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <div class="input-group flex-nowrap mb-15">
+        <div class="input-group-prepend">
+            {{ form_label(form.label, null, {
+                'label': 'Libellé',
+                'label_attr': {'class': 'input-group-text'}
+            }) }}
+        </div>
+        {{ form_widget(form.label, {'attr': {'class': 'form-control'}}) }}
+    </div>
+    <hr>
+    <div class="text-center">
+        <button class="btn btn-primary">{{ button_label|default('Enregistrer') }}</button>
+    </div>
 {{ form_end(form) }}

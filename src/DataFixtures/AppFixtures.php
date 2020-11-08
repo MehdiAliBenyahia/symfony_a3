@@ -145,6 +145,76 @@ class AppFixtures extends Fixture
                 'slug' => 'cours-cms',
                 'date_created' => $today,
                 'category' => $categoriesRepository[3]
+            ],
+            16 => [
+                'title' => 'Cours JAVA',
+                'description' => $lorem,
+                'slug' => 'cours-java',
+                'date_created' => $today,
+                'category' => $categoriesRepository[7]
+            ],
+            17 => [
+                'title' => 'Cours Kotlin',
+                'description' => $lorem,
+                'slug' => 'cours-cms',
+                'date_created' => $today,
+                'category' => $categoriesRepository[6]
+            ],
+            18 => [
+                'title' => 'Cours Ruby',
+                'description' => $lorem,
+                'slug' => 'cours-ruby',
+                'date_created' => $today,
+                'category' => $categoriesRepository[5]
+            ],
+            19 => [
+                'title' => 'Cours Julia',
+                'description' => $lorem,
+                'slug' => 'cours-julia',
+                'date_created' => $today,
+                'category' => $categoriesRepository[8]
+            ],
+            20 => [
+                'title' => 'Cours Scala',
+                'description' => $lorem,
+                'slug' => 'cours-cms',
+                'date_created' => $today,
+                'category' => $categoriesRepository[4]
+            ],
+            21 => [
+                'title' => 'Cours GO',
+                'description' => $lorem,
+                'slug' => 'cours-go',
+                'date_created' => $today,
+                'category' => $categoriesRepository[9]
+            ],
+            22 => [
+                'title' => 'Cours Javascript',
+                'description' => $lorem,
+                'slug' => 'cours-javascript',
+                'date_created' => $today,
+                'category' => $categoriesRepository[2]
+            ],
+            23 => [
+                'title' => 'Cours jQuery',
+                'description' => $lorem,
+                'slug' => 'cours-jquery',
+                'date_created' => $today,
+                'category' => $categoriesRepository[1]
+            ],
+            24 => [
+                'title' => 'Cours Pascal',
+                'description' => $lorem,
+                'slug' => 'cours-pascal',
+                'date_created' => $today,
+                'category' => $categoriesRepository[6]
+            ],
+            25 => [
+                'title' => 'Cours TypeScript',
+                'description' => $lorem,
+                'slug' => 'cours-typescript',
+                'date_created' => $today,
+                'category' => $categoriesRepository[3]
             ]
         ];
 

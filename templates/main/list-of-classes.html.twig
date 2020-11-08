@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Tous les cours</h1>
+        <hr>
+        <div class="flex-row-wrap-center">
+            {% for course in classes %}
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                    <div class="card card-home">
+                        <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="text-center">
+                                <h5 class="card-title">{{ course.title }}</h5>
+                            </div>
+                            <hr>
+                            <p class="card-text"><b>{{ course.category.label }}</b></p>
+                            <p class="card-text">{{ course.description|length > 80 ? course.description|slice(0, 80) ~ '...' : course.description }}</p>
+                            <hr>
+                            <div class="text-center">
+                                <a href="{{ path('show_course_main', {slug: course.slug}) }}" class="btn btn-primary">Voir le cours</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

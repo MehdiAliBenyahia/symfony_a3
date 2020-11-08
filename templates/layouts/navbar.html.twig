@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="{{ path("index") }}">
+        <img class="logo-navbar" src="{{ asset('/img/symfony_white.png') }}" alt="Logo de Symfony">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path("index") }}">Accueil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path("categories_main") }}">Catégories</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path("classes_main")}}">Cours</a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+            {% if is_granted('ROLE_USER') %}
+                <a href="{{ path("app_logout") }}">Déconnexion</a>&nbsp;/&nbsp;<a href="{{ path("admin") }}">Administration</a>
+            {% else %}
+                <a href="{{ path("app_register") }}">S'inscrire</a>&nbsp;/&nbsp;<a href="{{ path("app_login") }}">Administration</a>
+            {% endif %}
+        </span>
+    </div>
+</nav>

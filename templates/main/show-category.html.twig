@@ -2,39 +2,13 @@
 
 {% block content %}
     <div class="container">
-        <h1>Bienvenue !</h1>
+        <h1>Catégorie : <b>{{ category.label }}</b></h1>
         <hr>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <hr>
-        <h2>Top 5 Catégories</h2>
-        <hr>
-        <div class="flex-row-wrap-center">
-            {% for category in categories %}
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
-                    <div class="card card-home">
-                        <img src="https://images.unsplash.com/photo-1600832331197-ad575931911b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ category.label }}</h5>
-                            <hr>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <hr>
-                            <div class="text-center">
-                                <a href="{{ path('show_category_main', {id: category.id}) }}" class="btn btn-primary">Voir la catégorie</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-        <div class="text-center">
-            <a href="{{ path('categories_main') }}" class="btn btn-primary btn-lg">Voir toutes les catégories</a>
-        </div>
-        <hr>
-        <h2>Top 5 Cours</h2>
-        <hr>
         <div class="flex-row-wrap-center">
             {% for course in classes %}
-                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                <div class="col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
                     <div class="card card-home">
                         <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -52,9 +26,6 @@
                     </div>
                 </div>
             {% endfor %}
-        </div>
-        <div class="text-center">
-            <a href="{{ path('classes_main') }}" class="btn btn-primary btn-lg">Voir tous les cours</a>
         </div>
     </div>
 {% endblock %}

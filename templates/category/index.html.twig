@@ -1,27 +1,28 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
-{% block title %}Category index{% endblock %}
-
-{% block body %}
+{% block content %}
     <h1>Liste des Catégories</h1>
     <hr>
-
+    <div class="text-center">
+        <a class="btn btn-primary mb-15" href="{{ path('category_new') }}">Nouvelle Catégorie</a>
+    </div>
     <table class="table">
         <thead>
-            <tr>
+            <tr class="text-center">
                 <th>Id</th>
-                <th>Label</th>
-                <th>actions</th>
+                <th>Libellé</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for category in categories %}
-            <tr>
+            <tr class="text-center">
                 <td>{{ category.id }}</td>
                 <td>{{ category.label }}</td>
                 <td>
-                    <a href="{{ path('category_show', {'id': category.id}) }}">show</a>
-                    <a href="{{ path('category_edit', {'id': category.id}) }}">edit</a>
+                    <a class="btn btn-primary" href="{{ path('category_show', {'id': category.id}) }}">Voir</a>
+                    &nbsp;
+                    <a class="btn btn-warning" href="{{ path('category_edit', {'id': category.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -32,5 +33,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('category_new') }}">Create new</a>
+
 {% endblock %}

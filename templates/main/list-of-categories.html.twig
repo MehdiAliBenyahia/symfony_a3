@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <h1>Toutes les catégories</h1>
+        <hr>
+        <div class="flex-row-wrap-center">
+            {% for category in categories %}
+                <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4">
+                    <div class="card card-home">
+                        <img src="https://images.unsplash.com/photo-1600832331197-ad575931911b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ category.label }}</h5>
+                            <hr>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <hr>
+                            <div class="text-center">
+                                <a href="{{ path('show_category_main', {id: category.id}) }}" class="btn btn-primary">Voir la catégorie</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

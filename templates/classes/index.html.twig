@@ -1,33 +1,32 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
-{% block title %}Classes index{% endblock %}
-
-{% block body %}
+{% block content %}
     <h1>Liste des Cours</h1>
     <hr>
-
+    <div class="text-center">
+        <a class="btn btn-primary mb-15" href="{{ path('classes_new') }}">Nouveau cours</a>
+    </div>
     <table class="table">
         <thead>
-            <tr>
+            <tr class="text-center">
                 <th>Id</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Date_created</th>
+                <th>Titre</th>
                 <th>Slug</th>
-                <th>actions</th>
+                <th>Date de création</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
         {% for class in classes %}
-            <tr>
+            <tr class="text-center">
                 <td>{{ class.id }}</td>
                 <td>{{ class.title }}</td>
-                <td>{{ class.description }}</td>
-                <td>{{ class.dateCreated ? class.dateCreated|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ class.slug }}</td>
+                <td>{{ class.dateCreated ? class.dateCreated|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('classes_show', {'id': class.id}) }}">show</a>
-                    <a href="{{ path('classes_edit', {'id': class.id}) }}">edit</a>
+                    <a class="btn btn-primary" href="{{ path('classes_show', {'id': class.id}) }}">Voir</a>
+                    &nbsp;
+                    <a class="btn btn-warning" href="{{ path('classes_edit', {'id': class.id}) }}">Modifier</a>
                 </td>
             </tr>
         {% else %}
@@ -38,5 +37,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('classes_new') }}">Create new</a>
+
 {% endblock %}

@@ -4,17 +4,71 @@
     {% for flashError in app.flashes('verify_email_error') %}
         <div class="alert alert-danger" role="alert">{{ flashError }}</div>
     {% endfor %}
-
-    <h1>S'enregistrer</h1>
-    <hr>
-
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
-
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+    <div class="container">
+        <h1>S'enregistrer</h1>
+        <hr>
+        <div class="alert alert-info" role="alert">
+            <b>Tous les champs du formulaire sont obligatoires !</b>
+        </div>
+        <hr>
+        {{ form_start(registrationForm) }}
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="input-group flex-nowrap mb-15">
+                        <div class="input-group-prepend">
+                            {{ form_label(registrationForm.email, null, {
+                                'label': 'Email',
+                                'label_attr': {'class': 'input-group-text'}
+                            }) }}
+                        </div>
+                        {{ form_widget(registrationForm.email, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="input-group flex-nowrap mb-15">
+                        <div class="input-group-prepend">
+                            {{ form_label(registrationForm.plainPassword, null, {
+                                'label': 'Mot de passe',
+                                'label_attr': {'class': 'input-group-text'}
+                            }) }}
+                        </div>
+                        {{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="input-group flex-nowrap">
+                        <div class="input-group-prepend">
+                            {{ form_label(registrationForm.firstname, null, {
+                                'label': 'Prénom',
+                                'label_attr': {'class': 'input-group-text'}
+                            }) }}
+                        </div>
+                        {{ form_widget(registrationForm.firstname, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <div class="input-group flex-nowrap">
+                        <div class="input-group-prepend">
+                            {{ form_label(registrationForm.lastname, null, {
+                                'label': 'Nom de Famille',
+                                'label_attr': {'class': 'input-group-text'}
+                            }) }}
+                        </div>
+                        {{ form_widget(registrationForm.lastname, {'attr': {'class': 'form-control'}}) }}
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-15">
+                {{ form_label(registrationForm.agreeTerms, null, {
+                    'label':'Conditions Générales d\'Utilisation'
+                }) }}
+                {{ form_widget(registrationForm.agreeTerms) }}
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg mt-15">S'inscrire</button>
+            </div>
+        {{ form_end(registrationForm) }}
+    </div>
 {% endblock %}

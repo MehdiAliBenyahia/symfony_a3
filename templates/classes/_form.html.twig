@@ -1,4 +1,73 @@
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group flex-nowrap mb-15">
+                <div class="input-group-prepend">
+                    {{ form_label(form.title, null, {
+                        'label': 'Titre',
+                        'label_attr': {'class': 'input-group-text'}
+                    }) }}
+                </div>
+                {{ form_widget(form.title, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="input-group flex-nowrap mb-15">
+                <div class="input-group-prepend">
+                    {{ form_label(form.slug, null, {
+                        'label': 'Slug',
+                        'label_attr': {'class': 'input-group-text'}
+                    }) }}
+                </div>
+                {{ form_widget(form.slug, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="input-group flex-nowrap mb-15">
+                <div class="input-group-prepend">
+                    {{ form_label(form.category, null, {
+                        'label': 'Catégorie',
+                        'label_attr': {'class': 'input-group-text'}
+                    }) }}
+                </div>
+                {{ form_widget(form.category, {'attr': {'class': 'form-control'}}) }}
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="input-group flex-nowrap mb-15">
+                <div class="input-group-prepend">
+                    {{ form_label(form.date_created, null, {
+                        'label': 'Date de création',
+                        'label_attr': {'class': 'input-group-text'}
+                    }) }}
+                </div>
+
+                {{ form_widget(form.date_created, {'attr': {'class': 'form-control'}}) }}
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="input-group flex-nowrap mb-15">
+        <div class="input-group-prepend">
+            {{ form_label(form.description, null, {
+                'label': 'Description',
+                'label_attr': {'class': 'input-group-text'}
+            }) }}
+        </div>
+        {{ form_widget(form.description, {'attr': {'class': 'form-control'}}) }}
+    </div>
+
+
+
+
+
+    <hr>
+    <div class="text-center">
+        <button class="btn btn-primary">{{ button_label|default('Enregistrer') }}</button>
+    </div>
+    <hr>
 {{ form_end(form) }}

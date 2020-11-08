@@ -1,11 +1,8 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
-{% block title %}New Classes{% endblock %}
-
-{% block body %}
-    <h1>Create new Classes</h1>
-
+{% block content %}
+    <h1>Nouveau cours</h1>
+    <hr>
     {{ include('classes/_form.html.twig') }}
-
-    <a href="{{ path('classes_index') }}">back to list</a>
+    <a CLASS="btn btn-primary" href="{{ path('classes_index') }}">Retour</a>
 {% endblock %}

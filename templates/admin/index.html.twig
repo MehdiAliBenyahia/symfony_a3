@@ -1,20 +1,22 @@
-{% extends 'base.html.twig' %}
+{% extends 'admin.html.twig' %}
 
-{% block title %}Hello AdminController!{% endblock %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/wamp64/www/symfony_a3/src/Controller/AdminController.php'|file_link(0) }}">src/Controller/AdminController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/wamp64/www/symfony_a3/templates/admin/index.html.twig'|file_link(0) }}">templates/admin/index.html.twig</a></code></li>
-    </ul>
-</div>
+{% block content %}
+    <h1 class="mb-15">Statistiques</h1>
+    <table class="table">
+        <tbody>
+        <tr>
+            <th>Catégories</th>
+            <td>{{ categories }}</td>
+        </tr>
+        <tr>
+            <th>Cours</th>
+            <td>{{ classes }}</td>
+        </tr>
+        <tr>
+            <th>Utilisateurs</th>
+            <td>{{ users }}</td>
+        </tr>
+        </tbody>
+    </table>
 {% endblock %}
