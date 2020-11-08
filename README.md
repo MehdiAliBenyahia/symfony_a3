@@ -34,11 +34,5 @@ php bin/console doctrine:migrations:migrate
 <p>Load our Fixtures ! (Dummy's datas) :</p>
 
 ```
-php bin/console doctrine:fixture:load
+php bin/console doctrine:fixtures:load
 ```
-
-# Informations
-
-<p>You have to register an Admin Account, route name is : <b>/register</b>.</p>
-
-<p>You can also use : <b>/login</b> and <b>/logout</b>.</p>
