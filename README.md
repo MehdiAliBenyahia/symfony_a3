@@ -1,7 +1,5 @@
 # Symfony_A3
-
-<p>Contributors</p>
-
+<p>Contributors :</p>
 <ul>
     <li>Mehdi ALI BENYAHIA</li>
     <li>Rayane COSTET</li>
@@ -9,9 +7,7 @@
 </ul>
 
 # Installation
-
 <p>First, you have to download / clone this project : <a href="https://github.com/MehdiAliBenyahia/symfony_a3.git">here</a>.</p>
-
 <p>Second, you have to configure the file (line 32) <b>.env</b> : </p>
 
 ```
@@ -42,3 +38,7 @@ php bin/console doctrine:fixture:load
 ```
 
 # Informations
+
+<p>You have to register an Admin Account, route name is : <b>/register</b></p>
+
+<p>You can also use : <b>/login</b> and <b>/logout</b></p>
