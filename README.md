@@ -36,3 +36,7 @@ php bin/console doctrine:migrations:migrate
 ```
 php bin/console doctrine:fixtures:load
 ```
+<p>And for running our project in localhost</p>
+```
+symfony server:start
+```
