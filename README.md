@@ -39,6 +39,6 @@ php bin/console doctrine:fixture:load
 
 # Informations
 
-<p>You have to register an Admin Account, route name is : <b>/register</b></p>
+<p>You have to register an Admin Account, route name is : <b>/register</b>.</p>
 
-<p>You can also use : <b>/login</b> and <b>/logout</b></p>
+<p>You can also use : <b>/login</b> and <b>/logout</b>.</p>
