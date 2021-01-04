@@ -3,6 +3,7 @@
 <ul>
     <li>Mehdi ALI BENYAHIA</li>
     <li>Rayane COSTET</li>
+    <li>Lucas BERIOT</li>
 </ul>
 
 # Installation
